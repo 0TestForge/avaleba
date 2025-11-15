@@ -1,0 +1,74 @@
+.app {
+  min-height: 100vh;
+  background: #FF7979;
+  background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23FF5C5C' opacity='0.1'/%3E%3C/svg%3E");
+  background-size: 100px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.desktop-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mobile-layout {
+  display: none;
+}
+
+.content-left {
+  color: white;
+}
+
+.heading {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 30px 0;
+  letter-spacing: -0.5px;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+@media (max-width: 768px) {
+  .desktop-layout {
+    display: none;
+  }
+
+  .mobile-layout {
+    display: block;
+  }
+
+  .mobile-content {
+    text-align: center;
+    color: white;
+    margin-bottom: 60px;
+  }
+
+  .mobile-content .heading {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .mobile-content .description {
+    font-size: 16px;
+  }
+
+  .signup-container {
+    margin: 0 auto;
+  }
+}
